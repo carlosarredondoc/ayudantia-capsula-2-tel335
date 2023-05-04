@@ -1,0 +1,43 @@
+{
+  "name": "rest_api_basic",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rimraf dist && babel src --out-dir dist  --copy-files",
+    "start": "node dist/index.js",
+    "start:dev": "nodemon --exec babel-node src/index.js",
+    "start_javascript_topicos:dev": "nodemon --exec babel-node src/javascript_topicos.js",
+    "start_dotenv:dev": "nodemon --exec babel-node src/punto-env.js",
+    "start_jwt:dev": "nodemon --exec babel-node src/jwt.js",
+    "start_bcrypt:dev": "nodemon --exec babel-node src/hash_bcrypt.js",
+    "start_mongoose:dev": "nodemon --exec babel-node src/uso_mongoose.js",
+    "start_sequelize:dev": "nodemon --exec babel-node src/uso_sequelize.js"
+  },
+  "author": "Carlos Arredondo",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^16.0.3",
+    "jsonwebtoken": "^9.0.0",
+    "koa": "^2.13.4",
+    "koa-body": "^4.2.0",
+    "koa-router": "^10.1.1",
+    "mongoose": "^7.1.0",
+    "mysql2": "^3.2.4",
+    "pg": "^8.10.0",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.31.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.21.5",
+    "@babel/core": "^7.21.8",
+    "@babel/node": "^7.20.7",
+    "@babel/plugin-proposal-class-properties": "^7.18.6",
+    "@babel/plugin-proposal-object-rest-spread": "^7.20.7",
+    "@babel/preset-env": "^7.21.5",
+    "nodemon": "^2.0.22",
+    "rimraf": "^3.0.2"
+  }
+}
